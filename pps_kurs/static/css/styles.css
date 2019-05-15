@@ -1,0 +1,61 @@
+html, body {
+    height:100%;
+}
+
+h3 {
+    color: lightgray;
+}
+span{
+    color: lightgray;
+    padding-top: 1vh;
+}
+input{
+    padding-bottom: 0;
+    margin-top: 1vh;
+    margin-left: 3vh;
+    margin-right: 1vh;
+}
+label{
+    margin-left: 3vh;
+    margin-top: 1vh;
+    margin-bottom: 0;
+    color: lightgray;
+}
+
+.custom-back{
+    min-height: 100%;
+    min-width: 1024px;
+    background: url("../images/background.jpg") no-repeat center center  fixed;
+    background-size: cover;
+    padding-top: 2vh;
+    opacity: .8;
+}
+
+.content_custom-back{
+    margin-top: 4vh;
+    padding: 4vh;
+    background-color: rgba(0, 0, 0, .3);!important;
+    width: 80%;
+    border-radius:  23px;
+}
+
+.custom-link{
+    color: lightgray;
+    padding-bottom: 2vh;
+}
+
+.custom-link:hover{
+    color: whitesmoke;
+}
+
+.custom-link:active{
+    color: lightgray;
+}
+
+.img-in-pairs{
+    height: 30vh;
+    width: auto;
+    padding-bottom: 2vh;
+    padding-top: 2vh;
+    border-radius: 4vh;
+}

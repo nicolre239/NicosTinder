@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration</title>
+
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- CUSTOM -->
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+<div class="custom-back">
+<div class="offset-sm-2 col-sm-8 offset-lg-4 col-lg-4 content_custom-back">
+<h3 class="text-center">Регистрация</h3>
+    <form id="register_form" class="form-group" action="{% url 'reg_check' %}"> {% csrf_token %}
+        <div class="form-group">
+            <label for="text">Имя</label>
+            <input type="text" class="form-control" name="name" id="id_name" required maxlength="25">
+            <div class="form-inline">
+                <label for="radio">Пол</label>
+                <input type="radio" name="gender" value="male" class="form-control" required><span>М</span><br>
+                <input type="radio" name="gender" value="female" class="form-control" required><span>Ж</span><br>
+            </div>
+            <label for="number">Возраст</label>
+            <input type="number" name="age" id="id_age" class="form-control" min="1" required>
+            <label for="email">E-mail</label>
+            <input type="email" class="form-control" name="email" id="id_email" class="form-control" required>
+            <label for="password">Пароль</label>
+            <input type="password" class="form-control" name="password" id="id_password" class="form-control" required>
+            <label for="text">Тополиный пух, жара ...?</label>
+            <input type="text" class="form-control" name="answer" id="id_answer" class="form-control" required maxlength="60">
+        </div>
+        <div class="text-center">
+            <button type="submit" class="btn btn-success" id="submit_button">Регистрация</button>
+        </div>
+    </form>
+</div>
+</div>
+
+<!-- MORE BOOTSTRAP -->
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<!-- CUSTOM -->
+<script src="{%  static 'js/scripts.js'%}"></script>
+</body>
+</html>
